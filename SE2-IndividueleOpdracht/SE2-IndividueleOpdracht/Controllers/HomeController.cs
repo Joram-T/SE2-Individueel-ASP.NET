@@ -8,6 +8,9 @@ namespace SE2_IndividueleOpdracht.Controllers
 {
     public class HomeController : Controller
     {
+
+        public SE2_IndividueleOpdracht.Models.Spotifoe spotifoe = new SE2_IndividueleOpdracht.Models.Spotifoe();
+
         public ActionResult Index()
         {
             return View();
@@ -23,6 +26,13 @@ namespace SE2_IndividueleOpdracht.Controllers
         public ActionResult Test()
         {
             ViewBag.Message = "Test jwz.";
+
+            return View();
+        }
+
+        public ActionResult Afspeellijsten()
+        {
+            ViewBag.Data = spotifoe;
 
             return View();
         }
