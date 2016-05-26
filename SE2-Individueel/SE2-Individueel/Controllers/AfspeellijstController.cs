@@ -20,13 +20,19 @@ namespace SE2_Individueel.Controllers
             return View();
         }
 
+        public ActionResult Afspeellijst()
+        {
+            ViewBag.Data = spotify;
+            return View();
+        }
+
         public ActionResult NieuweAfspeellijst(string afspeellijstnaam)
         {
-            if (afspeellijstnaam != null)
-            {
-                spotify.newAfspeellijst("Test");
-                return RedirectToAction("Index");
-            }
+            //if (true)
+            //{
+            //    spotify.newAfspeellijst("Test");
+            //    return RedirectToAction("Index");
+            //}
 
             ViewBag.Data = spotify;
 
