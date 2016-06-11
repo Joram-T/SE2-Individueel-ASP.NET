@@ -9,12 +9,14 @@ namespace SE2_Individueel.Models
     {
         public int ID { get; }
         public string Naam { get; }
-        public TimeSpan Lengte { get; set; }
+        public TimeSpan Lengte { get; }
+        public List<Lied> Liedjes { get; }
 
-        public Afspeellijst(int id, string naam)
+        public Afspeellijst(string naam, int ID)
         {
-            ID = id;
-            Naam = naam;
+            Liedjes = new List<Lied>();
+            this.Naam = naam;
+            this.ID = ID;
         }
 
     }

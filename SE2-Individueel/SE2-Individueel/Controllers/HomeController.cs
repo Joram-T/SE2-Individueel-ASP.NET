@@ -11,6 +11,10 @@ namespace SE2_Individueel.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            if ((Session["Gebruiker"] == null))
+            {
+                return RedirectToAction("Index", "Login", new { area = "" });
+            }
             return View();
         }
     }

@@ -3,5 +3,13 @@
     ViewBag.Title = "Afspeellijst";
 }
 
-<h2>Afspeellijst</h2>
+<h2>@ViewBag.Afspeellijst.Naam</h2>
+<div class="liedjes">
+    <ul>
+        @foreach (var lied in ViewBag.Afspeellijst.Liedjes as List<SE2_Individueel.Models.Lied>)
+        {
+            <li>@lied.Naam</li>
+        }
+    </ul>
+</div>
 
